@@ -171,7 +171,7 @@ final class ViewController: UIViewController {
             dayStackView.topAnchor.constraint(equalTo: collectionView.topAnchor),
             dayStackView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor),
             
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            collectionView.topAnchor.constraint(equalTo: monthStackView.bottomAnchor, constant: -10),
             collectionView.leadingAnchor.constraint(equalTo: dayStackView.trailingAnchor, constant: 8),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
             collectionView.heightAnchor.constraint(equalToConstant: 200),
@@ -181,6 +181,7 @@ final class ViewController: UIViewController {
             buttonsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             buttonsStackView.heightAnchor.constraint(equalToConstant: 50),
             
+            monthStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             monthStackView.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -8),
             monthStackView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 20),
             monthStackView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -20)
